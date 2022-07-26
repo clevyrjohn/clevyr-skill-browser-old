@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "vue": "^3.2.37",
-    "vue-gapi": "^2.1.0",
-    "vue-router": "^4.0.16"
+    "vue-router": "^4.0.16",
+    "googleapis": "^39.0.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",

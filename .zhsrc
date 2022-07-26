@@ -1,0 +1,16 @@
+if [[ $PWD == *"clevyr-skill-browser"* ]]; then
+    alias sail='./vendor/bin/sail'
+    alias csb='sail up -d'
+    alias app='sail exec app'
+    # alias hot='sail exec hot'
+    alias dusk='sail exec app php artisan dusk'
+    alias phpunit='sail exec app ./vendor/bin/phpunit'
+    # alias run-tests='hot npm run test:unit && app php artisan dusk && app ./vendor/bin/phpunit'
+    alias rebuild='sail down && sail build && sail up -d'
+    alias reseed='app php artisan migrate:fresh && app php artisan db:seed'
+    alias restart='sail down && sail up -d'
+    alias restart-fresh='sail down --volumes && sail up -d && reseed'
+    alias logs='sail logs -f'
+else
+    alias csb='cd ~/clevyr/clevyr-skill-browser/ && sail up -d'
+fi
